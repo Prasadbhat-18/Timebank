@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TimeBank" />
+    <meta name="theme-color" content="#10b981" />
+    <title>TimeBank - Skill Exchange Platform</title>
+    <style>
+      /* Noupe Chatbot Resize Styles */
+      /* Target the chatbot iframe or container */
+      iframe[src*="noupe.com"],
+      div[data-noupe],
+      .noupe-chatbot,
+      .noupe-widget {
+        max-width: 400px !important;
+        max-height: 600px !important;
+        width: 90vw !important;
+        height: 80vh !important;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 9999 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+      }
+
+      /* On mobile, make it smaller */
+      @media (max-width: 640px) {
+        iframe[src*="noupe.com"],
+        div[data-noupe],
+        .noupe-chatbot,
+        .noupe-widget {
+          max-width: 320px !important;
+          max-height: 500px !important;
+          width: 85vw !important;
+          height: 70vh !important;
+          bottom: 10px !important;
+          right: 10px !important;
+        }
+      }
+
+      /* Ensure chatbot doesn't cover the entire screen */
+      body.noupe-open {
+        overflow: auto !important;
+      }
+
+      /* Style the chatbot overlay/backdrop if it exists */
+      .noupe-overlay,
+      div[style*="position: fixed"][style*="top: 0"][style*="left: 0"] {
+        background: rgba(0,0,0,0.3) !important;
+        backdrop-filter: blur(2px) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src='https://www.noupe.com/embed/0199faf09d8676fdb8ebee83bfb76a104e7f.js' async defer></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

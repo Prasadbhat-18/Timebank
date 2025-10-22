@@ -1,0 +1,77 @@
+[
+  {
+    "id": "skill-1",
+    "name": "Web Development",
+    "category": "Technology"
+  },
+  {
+    "id": "skill-2",
+    "name": "Graphic Design",
+    "category": "Design"
+  },
+  {
+    "id": "skill-3",
+    "name": "Cooking",
+    "category": "Lifestyle"
+  },
+  {
+    "id": "skill-4",
+    "name": "Language Tutoring",
+    "category": "Education"
+  },
+  {
+    "id": "skill-5",
+    "name": "Music Lessons",
+    "category": "Arts"
+  },
+  {
+    "id": "skill-6",
+    "name": "Home Repair",
+    "category": "Maintenance"
+  },
+  {
+    "id": "skill-7",
+    "name": "Photography",
+    "category": "Arts"
+  },
+  {
+    "id": "skill-8",
+    "name": "Fitness Training",
+    "category": "Health"
+  },
+  {
+    "id": "skill-9",
+    "name": "Gardening",
+    "category": "Lifestyle"
+  },
+  {
+    "id": "skill-10",
+    "name": "Data Analysis",
+    "category": "Technology"
+  },
+  {
+    "id": "skill-11",
+    "name": "Tutoring",
+    "category": "Education"
+  },
+  {
+    "id": "skill-12",
+    "name": "Pet Care",
+    "category": "Lifestyle"
+  },
+  {
+    "id": "skill-13",
+    "name": "House Cleaning",
+    "category": "Maintenance"
+  },
+  {
+    "id": "skill-14",
+    "name": "Writing",
+    "category": "Creative"
+  },
+  {
+    "id": "skill-15",
+    "name": "Translation",
+    "category": "Language"
+  }
+]

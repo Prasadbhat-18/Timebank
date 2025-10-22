@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode base colors */
+:root.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0a0f0a; /* near-black with green hint */
+  color: rgb(52 211 153); /* emerald-400 */
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  @keyframes gradient {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  .animate-gradient {
+    animation: gradient 3s ease infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(5px);
+    }
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+
+  /* Mobile-First Responsive Utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Prevent text selection on buttons */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Mobile-friendly tap targets */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Smooth scrolling for mobile */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobile safe area support */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
