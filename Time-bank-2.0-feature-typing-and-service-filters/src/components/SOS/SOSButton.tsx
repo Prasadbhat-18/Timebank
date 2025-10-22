@@ -142,11 +142,27 @@ export function SOSButton({ userLocation }: SOSButtonProps) {
     <>
       {/* Main SOS Button */}
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={() => {
+          console.log('🚨 MAIN SOS BUTTON CLICKED!');
+          alert('SOS Button Clicked!');
+          setIsExpanded(!isExpanded);
+        }}
         className="fixed bottom-20 md:bottom-6 right-4 md:right-6 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-full shadow-2xl flex items-center justify-center z-40 transition-all duration-300 animate-pulse border-4 border-white"
         aria-label="Emergency SOS Button"
       >
         <AlertTriangle className="w-7 h-7 md:w-8 md:h-8" />
+      </button>
+
+      {/* Test SOS Button */}
+      <button
+        onClick={() => {
+          console.log('🧪 TEST SOS BUTTON CLICKED!');
+          alert('Test SOS Button Works!');
+        }}
+        className="fixed bottom-32 md:bottom-18 right-4 md:right-6 w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center z-40 transition-all duration-300"
+        aria-label="Test SOS Button"
+      >
+        <span className="text-xs font-bold">TEST</span>
       </button>
 
       {/* Expanded SOS Panel */}

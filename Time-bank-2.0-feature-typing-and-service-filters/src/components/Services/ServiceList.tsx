@@ -111,13 +111,25 @@ export const ServiceList: React.FC = () => {
         </div>
         <button
           onClick={() => {
-            console.log('🚀 Post Service button clicked');
+            console.log('🚀 POST SERVICE BUTTON CLICKED!');
+            alert('Post Service Button Clicked!');
             setShowServiceModal(true);
           }}
           className="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition flex items-center gap-2 shadow-lg"
         >
           <Plus className="w-5 h-5" />
           Post Service
+        </button>
+        
+        {/* Test Button */}
+        <button
+          onClick={() => {
+            console.log('🧪 TEST BUTTON CLICKED!');
+            alert('Test Button Works!');
+          }}
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition"
+        >
+          Test Button
         </button>
       </div>
 
@@ -307,7 +319,8 @@ export const ServiceList: React.FC = () => {
                         </span>
                         <button
                           onClick={async () => {
-                            console.log('🗑️ Cancel service button clicked for service:', service.id);
+                            console.log('🗑️ CANCEL SERVICE BUTTON CLICKED!');
+                            alert('Cancel Service Button Clicked!');
                             if (confirm('Are you sure you want to cancel this service? This action cannot be undone.')) {
                               try {
                                 console.log('Deleting service:', service.id);
